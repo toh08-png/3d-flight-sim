@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* シンプルなHUDスタイル */
+#hud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #0ff;
+  pointer-events: none;
+  text-shadow: 0 0 5px #0ff;
+  z-index: 10;
+}
+
+#reset-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #0ff;
+  border: 1px solid #0ff;
+  box-shadow: 0 0 5px #0ff;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  pointer-events: auto;
+  transition: all 0.2s;
+}
+
+#reset-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px #0ff;
+}
+
+#minimap-border {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff, inset 0 0 10px #0ff;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+#controls-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #f0f;
+  pointer-events: none;
+  font-size: 14px;
+  text-shadow: 0 0 5px #f0f;
+  z-index: 10;
+}

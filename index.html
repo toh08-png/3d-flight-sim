@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk Fantasy Flight Simulator</title>
+  </head>
+  <body>
+    <div id="hud">
+      <h2>CYBER-FANTASY FLIGHT</h2>
+      <p>Speed: <span id="speed-display">0</span></p>
+      <button id="reset-btn">RESET POSITION</button>
+    </div>
+    <div id="minimap-border"></div>
+    <div id="controls-info">
+      <p>[W/S] Pitch Down/Up</p>
+      <p>[A/D] Roll Left/Right</p>
+      <p>[Q/E] Yaw Left/Right</p>
+      <p>[Space] Accelerate</p>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
