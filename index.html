@@ -2,24 +2,81 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyberpunk Fantasy Flight Simulator</title>
+    <title>Cyberpunk Fantasy Flight Simulator - Title</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        color: #0ff;
+        overflow: hidden;
+      }
+      
+      /* 背景のサイバーパンク風グリッド装飾 */
+      body::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: 
+          linear-gradient(transparent 95%, rgba(0, 255, 255, 0.2) 100%),
+          linear-gradient(90deg, transparent 95%, rgba(0, 255, 255, 0.2) 100%);
+        background-size: 50px 50px;
+        z-index: -1;
+        transform: perspective(500px) rotateX(60deg) translateY(100px) translateZ(-200px);
+      }
+
+      h1 {
+        font-size: 4rem;
+        text-align: center;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+      }
+
+      p {
+        color: #f0f;
+        text-shadow: 0 0 5px #f0f;
+        margin-bottom: 60px;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+
+      .start-btn {
+        padding: 20px 60px;
+        font-size: 2rem;
+        font-weight: bold;
+        background: transparent;
+        color: #f0f;
+        border: 3px solid #f0f;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), inset 0 0 15px rgba(255, 0, 255, 0.5);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+      }
+
+      .start-btn:hover {
+        background: rgba(255, 0, 255, 0.2);
+        box-shadow: 0 0 40px #f0f, inset 0 0 30px #f0f;
+        transform: scale(1.05);
+      }
+      
+      .start-btn:active {
+        transform: scale(0.95);
+      }
+    </style>
   </head>
   <body>
-    <div id="hud">
-      <h2>CYBER-FANTASY FLIGHT</h2>
-      <p>Speed: <span id="speed-display">0</span></p>
-      <button id="reset-btn">RESET POSITION</button>
-    </div>
-    <div id="minimap-border"></div>
-    <div id="controls-info">
-      <p>[W/S] Pitch Down/Up</p>
-      <p>[A/D] Roll Left/Right</p>
-      <p>[Q/E] Yaw Left/Right</p>
-      <p>[Space] Accelerate</p>
-    </div>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <h1>CYBER-FANTASY FLIGHT</h1>
+    <p>3D Flight Simulator</p>
+    <!-- dist/index.html へのリンク -->
+    <a href="./dist/index.html" class="start-btn">START</a>
   </body>
 </html>
